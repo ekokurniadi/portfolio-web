@@ -4,7 +4,7 @@ import sq from '../assets/squiggle.png';
 
 export const Tagline = (props) => {
     return (
-        <section className="tagline mt-3" id="tentang">
+        <section className="tagline mt-3">
             <div className="container">
                 <div className="row">
                     <div className="col-md-12 d-flex justify-content-center">

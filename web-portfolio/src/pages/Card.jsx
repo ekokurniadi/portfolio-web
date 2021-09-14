@@ -9,8 +9,8 @@ export const Card = (props) => {
                     <div className="card-flyer">
                         <div className="text-box">
                             <div className="image-box">
-                            <div className="tag">
-                                Most Popular
+                            <div className="tag" >
+                                {props.bahasa}
                             </div>
                                 <img src={props.image} alt="" />
                             </div>

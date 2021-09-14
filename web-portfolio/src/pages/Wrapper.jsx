@@ -16,25 +16,27 @@ export const Wrapper = () => {
         AOS.refresh();
     }, [])
     return (
-        <Fragment>
+        <>
             <Navbar />
             <Hero />
-            <Tagline text="Tentang Saya" />
+            <section id="tentang">
+                <Tagline text="Tentang Saya" />
+            </section>
             <Line />
             <section id="portfolio">
                 <Portfolio />
             </section>
             <Line />
-            <Tagl text="Kemampuan" />
-            <section className="container" >
+            <section id="kemampuan" className="container">
+                <Tagl text="Kemampuan"/>
                 <Kemampuan />
             </section>
-            <Line />
-            <Tagl text="Kontak" />
             <section id="kontak">
+                <Line />
+                <Tagl text="Kontak" />
                 <Contact />
             </section>
             <Footer />
-        </Fragment>
+        </>
     )
 }

@@ -5,7 +5,6 @@ import ScrollspyNav from 'react-scrollspy-nav'
 import avatar from '../assets/avatars.png'
 export const Navbar = () => {
     const [navBackground, setNavBackground] = useState(false);
-    const [isVisible, setIsVisible] = useState(false);
     const changeBackground = () => {
         if (window.scrollY >= 80) {
             setNavBackground(true);
@@ -14,25 +13,8 @@ export const Navbar = () => {
         }
     }
 
-    const toggleVisibility = () => {
-        if (window.pageYOffset > 300) {
-            setIsVisible(true);
-        } else {
-            setIsVisible(false);
-        }
-    };
-
-    const scrollToTop = () => {
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
-        });
-    };
-
     window.addEventListener('scroll', changeBackground);
-    useEffect(() => {
-        window.addEventListener("scroll", toggleVisibility);
-    }, []);
+   
     return (
         <Fragment>
             <section className={navBackground == true ? 'navigation active' : 'navigation'}>
@@ -47,16 +29,16 @@ export const Navbar = () => {
                         <div className="collapse navbar-collapse " id="navbarSupportedContent" >
                             <ScrollspyNav scrollTargetIds={['tentang', 'portfolio', 'kemampuan', 'kontak']} currentClassName="is-current" style={{marginLeft:'auto !important'}}>
                                 <ul className="navbar-nav ml-auto">
-                                    <li className="nav-item" >
+                                    <li className="nav-item li" >
                                         <a href="/" className="nav-link">Beranda</a>
                                     </li>
-                                    <li className="nav-item">
+                                    <li className="nav-item li">
                                         <a href="#tentang" className="nav-link">Tentang Saya</a>
                                     </li>
-                                    <li className="nav-item">
+                                    <li className="nav-item li">
                                         <a href="#portfolio" className="nav-link">Portfolio</a>
                                     </li>
-                                    <li className="nav-item">
+                                    <li className="nav-item li">
                                         <a href="#kemampuan" className="nav-link">Kemampuan</a>
                                     </li>
                                     <li className="nav-item">
