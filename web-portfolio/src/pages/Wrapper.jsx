@@ -21,7 +21,11 @@ export const Wrapper = () => {
             <Navbar />
             <Hero />
 
-            <Tagline text="Tentang Saya" />
+            <section id="tentang">
+               
+                <Tagline text="Tentang Saya" />
+            </section>
+
 
             <section id="portfolio">
                 <Line />

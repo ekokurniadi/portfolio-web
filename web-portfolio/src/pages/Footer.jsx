@@ -111,6 +111,11 @@ export const Footer = () => {
                             <p style={{color:'white'}}>Copyright &copy; 2021 All right reserved. Made with <i className="fa fa-heart" style={{color:'red'}}></i> by Eko Kurniadi</p> 
                         </div>
                     </div>
+                    <div className="row">
+                        <div className="col-md-12 d-flex justify-content-center mt-3">
+                            <p style={{color:'white'}}></p> 
+                        </div>
+                    </div>
                 </div>
                 <button className="btn-floating" onClick={toChat}>
                     <span>
