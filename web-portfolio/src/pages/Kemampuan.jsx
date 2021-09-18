@@ -21,12 +21,13 @@ const Kemampuan = () => {
         slidesToScroll: 1
     };
     return (
-        <section className="kemampuan mt-3 mb-4 container">
+        <section className="kemampuan mt-4 mb-4 container" >
                 <Slider {...settings}>
             <div className="container">
                 <div className="row">
-                    <div className="col-md-3 py-2">
-                        <div className="card">
+                    <div className="col-md-3 py-2" >
+                        <div className="card" data-aos="fade-down"
+                            data-aos-duration="1000">
                             <div className="image d-flex">
                                 <img src={rnl} alt=""/>
                                 <div className="text-wrap align-self-center">
@@ -36,8 +37,9 @@ const Kemampuan = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-md-3 py-2">
-                        <div className="card">
+                    <div className="col-md-3 py-2" >
+                        <div className="card" data-aos="fade-down"
+                            data-aos-duration="1000">
                             <div className="image d-flex">
                                 <img src={angular} alt=""/>
                                 <div className="text-wrap align-self-center">
@@ -47,8 +49,9 @@ const Kemampuan = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-md-3 py-2">
-                        <div className="card">
+                    <div className="col-md-3 py-2" >
+                        <div className="card" data-aos="fade-down"
+                            data-aos-duration="1000">
                             <div className="image d-flex">
                                 <img src={vue} alt=""/>
                                 <div className="text-wrap align-self-center">
@@ -58,8 +61,9 @@ const Kemampuan = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-md-3 py-2">
-                        <div className="card">
+                    <div className="col-md-3 py-2" >
+                        <div className="card" data-aos="fade-down"
+                            data-aos-duration="1000">
                             <div className="image d-flex">
                                 <img src={next} alt=""/>
                                 <div className="text-wrap align-self-center">
@@ -76,8 +80,9 @@ const Kemampuan = () => {
             <div className="container">
                 <div className="row">
                     
-                    <div className="col-md-3 py-2">
-                        <div className="card">
+                    <div className="col-md-3 py-2" >
+                        <div className="card" data-aos="fade-down"
+                            data-aos-duration="1000">
                             <div className="image d-flex">
                                 <img src={ci} alt=""/>
                                 <div className="text-wrap align-self-center">
@@ -87,8 +92,9 @@ const Kemampuan = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-md-3 py-2">
-                        <div className="card">
+                    <div className="col-md-3 py-2" >
+                        <div className="card" data-aos="fade-down"
+                            data-aos-duration="1000">
                             <div className="image d-flex">
                                 <img src={flutter} alt=""/>
                                 <div className="text-wrap align-self-center">
@@ -98,8 +104,9 @@ const Kemampuan = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-md-3 py-2">
-                        <div className="card">
+                    <div className="col-md-3 py-2" >
+                        <div className="card" data-aos="fade-down"
+                            data-aos-duration="1000">
                             <div className="image d-flex">
                                 <img src={golang} alt=""/>
                                 <div className="text-wrap align-self-center">
@@ -109,8 +116,9 @@ const Kemampuan = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-md-3 py-2">
-                        <div className="card">
+                    <div className="col-md-3 py-2" >
+                        <div className="card" data-aos="fade-down"
+                            data-aos-duration="1000">
                             <div className="image d-flex">
                                 <img src={android} alt=""/>
                                 <div className="text-wrap align-self-center">

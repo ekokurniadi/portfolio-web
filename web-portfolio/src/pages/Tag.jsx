@@ -4,7 +4,7 @@ import './styles.css';
 
 export const Tagl = (props) => {
     return (
-        <section className="tagline mt-3">
+        <section className="tagline mt-5">
             <div className="container">
                 <div className="row">
                     <div className="col-md-12 d-flex justify-content-center">

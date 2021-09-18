@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import './styles.css';
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import ScrollspyNav from 'react-scrollspy-nav'
 import avatar from '../assets/avatars.png'
 export const Navbar = () => {

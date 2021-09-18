@@ -10,6 +10,7 @@ import AOS from 'aos';
 import "aos/dist/aos.css";
 import Kemampuan from "./Kemampuan";
 import { Contact } from "./Contact";
+import { MobileNavigation } from "./MobileNavigation";
 export const Wrapper = () => {
     useEffect(() => {
         AOS.init();
@@ -19,17 +20,20 @@ export const Wrapper = () => {
         <>
             <Navbar />
             <Hero />
-            <section id="tentang">
-                <Tagline text="Tentang Saya" />
-            </section>
-            <Line />
+
+            <Tagline text="Tentang Saya" />
+
             <section id="portfolio">
+                <Line />
                 <Portfolio />
             </section>
-            <Line />
-            <section id="kemampuan" className="container">
-                <Tagl text="Kemampuan"/>
-                <Kemampuan />
+            <section id="kemampuan">
+                <Line />
+                <div className="container">
+                    <Tagl text="Kemampuan" />
+                    <Kemampuan />
+
+                </div>
             </section>
             <section id="kontak">
                 <Line />
@@ -37,6 +41,7 @@ export const Wrapper = () => {
                 <Contact />
             </section>
             <Footer />
+            <MobileNavigation />
         </>
     )
 }

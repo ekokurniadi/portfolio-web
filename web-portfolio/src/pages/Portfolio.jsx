@@ -14,7 +14,7 @@ export const Portfolio = () => {
 
     return (
         <Fragment>
-            <Tagl text="Porfolio Saya" />
+            <Tagl text="Portfolio Saya" />
             <section className="portfolio" >
                 <div className="container ">
                     <div className="row">

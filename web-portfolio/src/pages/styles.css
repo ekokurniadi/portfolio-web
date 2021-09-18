@@ -117,6 +117,120 @@ button.btn-floating {
     background-color: #ffffff;
 }
 
+section.mobile-navigation {
+    display: none;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+    background-color: white;
+    min-height: 50px;
+    width: 100%;
+    box-shadow: 5px 5px 8px 5px black;
+    margin-top: 10px;
+}
+
+section.mobile-navigation div.active {
+    width: 70px;
+    height: 32px;
+    background-color: #007bff;
+    /* opacity: 80%; */
+    border-radius: 20px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -99999;
+    border: 3px solid #007bff;
+}
+
+.fade-a {
+    opacity: 1;
+    animation-name: fadeInOpacity;
+    animation-iteration-count: 1;
+    animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+    animation-duration: 0.2s;
+}
+
+@keyframes fadeInOpacity {
+    0% {
+        opacity: 0%;
+    }
+    10% {
+        opacity: 10%;
+    }
+    20% {
+        opacity: 20%;
+    }
+    30% {
+        opacity: 30%;
+    }
+    40% {
+        opacity: 40%;
+    }
+    50% {
+        opacity: 50%;
+    }
+    60% {
+        opacity: 60%;
+    }
+    70% {
+        opacity: 70%;
+    }
+    80% {
+        opacity: 80%;
+    }
+    90% {
+        opacity: 90%;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    section.mobile-navigation {
+        display: block;
+        position: sticky;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 999;
+        background-color: white;
+        min-height: 50px;
+        width: 100%;
+        box-shadow: 5px 5px 8px 5px black;
+        overflow-y: visible;
+        overflow-x: none;
+        overflow-block: visible;
+    }
+    button.btn-floating {
+        display: none;
+    }
+    span.fa.fa-bars {
+        display: none;
+    }
+    section.mobile-navigation div.center-button {
+        background-color: #f52060;
+        opacity: 100%;
+        text-align: center;
+        border-radius: 50%;
+        height: 60px;
+        width: 60px !important;
+        position: relative;
+        top: -30px;
+        box-shadow: 0px 0px 1px black;
+        z-index: 99999;
+    }
+    section.mobile-navigation img.active {
+        filter: brightness(0) invert(1);
+    }
+}
+
 section.kemampuan div.image {
     width: 100%;
     height: auto;
@@ -139,7 +253,7 @@ input.tanya[type="text"] {
     padding: 10px;
     margin-bottom: 3px;
     outline: none;
-    color: #f52060;
+    color: #f52060 !important;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -155,6 +269,10 @@ textarea.tanya {
     outline: none;
     color: #f52060 !important;
     font-family: 'Poppins', sans-serif;
+}
+
+input.tanya::placeholder {
+    color: #fa88aa !important;
 }
 
 textarea.tanya::placeholder {
@@ -423,7 +541,7 @@ section.line {
 }
 
 #cards_landscape_wrap-2 .container {
-    padding-top: 80px;
+    padding-top: 50px;
     padding-bottom: 100px;
 }
 
@@ -474,7 +592,7 @@ section.line {
 
 #cards_landscape_wrap-2 .card-flyer {
     background: #FFFFFF;
-    margin-top: 50px;
+    margin-top: 40px;
     -webkit-transition: all 0.2s ease-in;
     -moz-transition: all 0.2s ease-in;
     -ms-transition: all 0.2s ease-in;
