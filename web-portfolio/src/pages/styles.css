@@ -134,7 +134,7 @@ section.mobile-navigation {
 section.mobile-navigation div.active {
     width: 60px;
     height: 32px;
-    background-color: #007bff;
+    background-color: #3252df;
     /* opacity: 80%; */
     border-radius: 20px;
     position: absolute;
@@ -143,7 +143,35 @@ section.mobile-navigation div.active {
     left: 0;
     right: 0;
     z-index: -99999;
-    border: 3px solid #007bff;
+    border: 3px solid #3252df;
+}
+
+
+/* ===== Scrollbar CSS ===== */
+
+
+/* Firefox */
+
+* {
+    scrollbar-width: auto;
+    scrollbar-color: #ff0080 #ffffff;
+}
+
+
+/* Chrome, Edge, and Safari */
+
+*::-webkit-scrollbar {
+    width: 2px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #ffffff;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #ff0080;
+    border-radius: 10px;
+    border: 1px none #ff0080;
 }
 
 .fade-a {
@@ -190,6 +218,46 @@ section.mobile-navigation div.active {
     }
 }
 
+.bounce {
+    align-self: flex-end;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    /* background-color: #F44336;
+    height: 200px;
+    margin: 0 auto 0 auto; */
+    transform-origin: bottom;
+    /* width: 200px; */
+}
+
+.bounce-7 {
+    animation-name: bounce-7;
+    animation-timing-function: cubic-bezier(0.280, 0.840, 0.420, 1);
+}
+
+@keyframes bounce-7 {
+    0% {
+        transform: scale(1, 1) translateY(0);
+    }
+    10% {
+        transform: scale(1.1, .9) translateY(0);
+    }
+    30% {
+        transform: scale(.9, 1.1) translateY(-5px);
+    }
+    50% {
+        transform: scale(1.05, .95) translateY(0);
+    }
+    57% {
+        transform: scale(1, 1) translateY(-5px);
+    }
+    64% {
+        transform: scale(1, 1) translateY(0);
+    }
+    100% {
+        transform: scale(1, 1) translateY(0);
+    }
+}
+
 @media only screen and (max-width: 600px) {
     section.mobile-navigation {
         display: block;
@@ -204,7 +272,7 @@ section.mobile-navigation div.active {
         width: 95%;
         padding: 0px 3px 3px 3px;
         border-radius: 30px;
-        box-shadow: 0px 3px 8px 3px rgb(187, 184, 184);
+        box-shadow: 0px 3px00 8px 3px rgb(187, 184, 184);
         overflow-y: visible;
         overflow-x: none;
         overflow-block: visible;
@@ -212,12 +280,14 @@ section.mobile-navigation div.active {
     button.btn-floating {
         display: none;
     }
+    button.navbar-toggler {
+        display: none;
+    }
     span.fa.fa-bars {
         display: none;
     }
     section.mobile-navigation div.center-button {
         background-color: #f52060;
-        opacity: 100%;
         text-align: center;
         border-radius: 50%;
         height: 60px;
