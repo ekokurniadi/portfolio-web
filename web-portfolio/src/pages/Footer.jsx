@@ -101,7 +101,7 @@ export const Footer = () => {
                                     <i className="fab fa-instagram"></i> Instagram <p>@ekokurniadi1</p> </a>
                             </p>
                             <p>
-                                <a href="github.com/ekokurniadi/" target="_blank" style={{ color: 'white', textDecoration: 'none' }}>
+                                <a href="https://github.com/ekokurniadi/" target="_blank" style={{ color: 'white', textDecoration: 'none' }}>
                                     <i className="fab fa-github"></i> github <p>ekokurniadi</p> </a>
                             </p>
                         </div>

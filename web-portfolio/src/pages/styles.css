@@ -2,8 +2,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 .theme-light {
     --color-primary: white;
-    --color-secondary: #fbfbfe;
-    --color-accent: #fd6f53;
     --font-color: #000000;
     --blue-color: #3252df;
     --text-color: #212529;
@@ -11,8 +9,6 @@
 
 .theme-dark {
     --color-primary: #12202f;
-    --color-secondary: #243133;
-    --color-accent: #12cdea;
     --font-color: #ffffff;
     --blue-color: white;
     --text-color: white;
@@ -26,7 +22,7 @@
 .label {
     width: 50px;
     height: 26px;
-    background-color: #111;
+    background-color: #313030;
     display: flex;
     border-radius: 50px;
     align-items: center;
@@ -34,17 +30,19 @@
     padding: 5px;
     position: relative;
     transform: scale(1.5);
+    box-shadow: 1px 1px 1px 1px black;
 }
 
 .ball {
     width: 20px;
     height: 20px;
-    background-color: white;
+    background-color: whitesmoke;
     position: absolute;
-    top: 2px;
+    top: 3px;
     left: 2px;
     border-radius: 50%;
-    transition: transform 0.2s linear;
+    transition: transform 0.5s linear;
+    animation: bounce-7;
 }
 
 
@@ -55,7 +53,7 @@
 }
 
 .fa-moon {
-    color: pink;
+    color: yellow;
 }
 
 .fa-sun {
@@ -644,7 +642,7 @@ div.scroll-to-top {
 
 div.Typewriter {
     font-size: 25px;
-    color: var(--blue-color);
+    color: #3252df;
     font-family: "Poppins", sans-serif;
     font-weight: bold;
 }

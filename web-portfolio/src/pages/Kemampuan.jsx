@@ -21,7 +21,7 @@ const Kemampuan = () => {
         slidesToScroll: 1
     };
     return (
-        <section className="kemampuan mt-4 container" >
+        <section className="kemampuan mt-4 mb-4 container" >
                 <Slider  {...settings}>
             <div className="container">
                 <div className="row">

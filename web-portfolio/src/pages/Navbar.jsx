@@ -6,7 +6,8 @@ import avatar from "../assets/avatars.png";
 import { setTheme } from "./theme";
 export const Navbar = () => {
   const [navBackground, setNavBackground] = useState(false);
-  const [mode, setMode] = useState("light");
+  const [mode, setMode] = useState("dark");
+  let theme = localStorage.getItem("theme");
   const changeBackground = () => {
     if (window.scrollY >= 80) {
       setNavBackground(true);
@@ -29,7 +30,7 @@ export const Navbar = () => {
   return (
     <Fragment>
       <section
-        className={navBackground == true ? "navigation active" : "navigation"}
+        className={navBackground === true ? "navigation active" : "navigation"}
       >
         <nav className="navbar navbar-expand-lg navbar-light">
           <div className="container">
@@ -102,7 +103,7 @@ export const Navbar = () => {
                 </ul>
               </ScrollspyNav>
             </div>
-            <div>
+            <div className="mt-2 mr-2">
               <input
                 type="checkbox"
                 class="checkbox"
@@ -112,9 +113,13 @@ export const Navbar = () => {
               <label for="checkbox" class="label">
                 <i class="fas fa-moon"></i>
                 <i class="fas fa-sun"></i>
-                <div class="ball"></div>
+                <div class="ball bounce-7"></div>
               </label>
             </div>
+            {/* <label id="switch" class="switch">
+              <input type="checkbox" onClick={setThema} id="slider" />
+              <span class="slider round"></span>
+            </label> */}
           </div>
         </nav>
       </section>
