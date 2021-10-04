@@ -5,8 +5,8 @@ import { Tagl } from "./Tag";
 
 export const Tagline = (props) => {
     return (
-        <section className="tagline mt-2">
-            <div className="col-md-12 d-flex justify-content-end mt-5 mb-3">
+        <section className="tagline">
+            <div className="col-md-12 d-flex justify-content-end mb-3 tagli">
                 <img src={sq} alt="" />
             </div>
             <div className="container">

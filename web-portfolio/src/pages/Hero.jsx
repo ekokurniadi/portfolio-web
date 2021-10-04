@@ -8,7 +8,7 @@ import dots from '../assets/dots.png';
 export const Hero = () => {
     
     return (
-        <section className="hero">
+        <section className="hero" style={{marginTop:'-10px'}}>
             <div className="container">
                 <div className="row">
                     <div className="col-md-6 col-sm-12 col-xs-12 align-self-center information mt-3">

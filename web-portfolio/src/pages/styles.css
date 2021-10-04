@@ -1,5 +1,73 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+.theme-light {
+    --color-primary: white;
+    --color-secondary: #fbfbfe;
+    --color-accent: #fd6f53;
+    --font-color: #000000;
+    --blue-color: #3252df;
+    --text-color: #212529;
+}
+
+.theme-dark {
+    --color-primary: #12202f;
+    --color-secondary: #243133;
+    --color-accent: #12cdea;
+    --font-color: #ffffff;
+    --blue-color: white;
+    --text-color: white;
+}
+
+.checkbox {
+    opacity: 0;
+    position: absolute;
+}
+
+.label {
+    width: 50px;
+    height: 26px;
+    background-color: #111;
+    display: flex;
+    border-radius: 50px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    position: relative;
+    transform: scale(1.5);
+}
+
+.ball {
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    border-radius: 50%;
+    transition: transform 0.2s linear;
+}
+
+
+/*  target the elemenent after the label*/
+
+.checkbox:checked+.label .ball {
+    transform: translateX(24px);
+}
+
+.fa-moon {
+    color: pink;
+}
+
+.fa-sun {
+    color: yellow;
+}
+
+
+/* :root {
+    --primary-color: white;
+    --secondary-color: #42408F
+} */
+
 section.navigation nav {
     width: 100%;
     box-shadow: 5px 5px 8px 5px #ecebeb;
@@ -31,12 +99,12 @@ a {
 }
 
 .nav-item.li::after {
-    content: '';
+    content: "";
     display: block;
     width: 0;
     height: 2px;
     background: #f7471e;
-    transition: width .3s;
+    transition: width 0.3s;
 }
 
 .nav-item.li:hover::after,
@@ -55,13 +123,17 @@ button.slick-arrow::before {
 
 div.image-slider {
     border-radius: 30px;
-    background-color: #002855;
+    background-color: var(--color-primary);
     /* padding-right: 20px; */
     width: 10px;
 }
 
+section#kemampuan {
+    background: var(--color-primary);
+}
+
 section.kemampuan div.card {
-    background-color: var(--color-card, #FFFFFF);
+    background-color: var(--color-card, #ffffff);
     cursor: default;
     border-radius: 8px;
     box-shadow: rgba(49, 53, 59, 0.12) 0px 1px 6px 0px;
@@ -74,6 +146,10 @@ section.kemampuan div.card {
     padding-right: 15px;
 }
 
+section#kontak {
+    background: var(--color-primary);
+}
+
 div.chatImgWrapper {
     position: relative;
     height: 30px;
@@ -81,7 +157,7 @@ div.chatImgWrapper {
     line-height: 24px;
     text-indent: initial;
     cursor: pointer;
-    color: var(--G500, #03AC0E);
+    color: var(--G500, #03ac0e);
 }
 
 .btn-floating span {
@@ -106,8 +182,8 @@ button.btn-floating {
     bottom: 0px;
     height: auto;
     padding: 6px 20px;
-    box-shadow: 0 2px 6px 0 var(--N150, #B5BBC5);
-    color: var(--G500, #03AC0E);
+    box-shadow: 0 2px 6px 0 var(--N150, #b5bbc5);
+    color: var(--G500, #03ac0e);
     border-radius: 20px;
     font-size: 16px;
     z-index: 100;
@@ -231,7 +307,7 @@ section.mobile-navigation div.active {
 
 .bounce-7 {
     animation-name: bounce-7;
-    animation-timing-function: cubic-bezier(0.280, 0.840, 0.420, 1);
+    animation-timing-function: cubic-bezier(0.28, 0.84, 0.42, 1);
 }
 
 @keyframes bounce-7 {
@@ -239,13 +315,13 @@ section.mobile-navigation div.active {
         transform: scale(1, 1) translateY(0);
     }
     10% {
-        transform: scale(1.1, .9) translateY(0);
+        transform: scale(1.1, 0.9) translateY(0);
     }
     30% {
-        transform: scale(.9, 1.1) translateY(-5px);
+        transform: scale(0.9, 1.1) translateY(-5px);
     }
     50% {
-        transform: scale(1.05, .95) translateY(0);
+        transform: scale(1.05, 0.95) translateY(0);
     }
     57% {
         transform: scale(1, 1) translateY(-5px);
@@ -325,7 +401,7 @@ input.tanya[type="text"] {
     margin-bottom: 3px;
     outline: none;
     color: #f52060 !important;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 
 textarea.tanya {
@@ -339,7 +415,7 @@ textarea.tanya {
     margin-bottom: 3px;
     outline: none;
     color: #f52060 !important;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 
 input.tanya::placeholder {
@@ -351,8 +427,12 @@ textarea.tanya::placeholder {
 }
 
 section.contact div.container {
-    box-shadow: 0 2px 6px 0 var(--N150, #B5BBC5);
+    box-shadow: 0 2px 6px 0 var(--N150, #b5bbc5);
     background-color: #ffffff;
+}
+
+section.contact {
+    background-color: var(--color-primary);
 }
 
 section.kemampuan div.image img {
@@ -374,6 +454,8 @@ section.kemampuan div.text-wrap h4 {
     font-weight: 800;
     text-transform: capitalize;
     color: rgba(49, 53, 59, 0.96);
+    /* color: var(--color-primary); */
+    /* color: var(--font-color); */
     margin: 0px 0px 8px;
     line-height: 22px;
     max-height: 40px;
@@ -403,22 +485,22 @@ section.navigation a.nav-link.button {
 }
 
 section.navigation.active a {
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     font-size: 26px;
     font-weight: 500;
 }
 
 section.navigation.active a:hover {
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 
 section.navigation a.navbar-brand:hover {
-    font-family: 'Poppins', sans-serif;
-    color: #3252df
+    font-family: "Poppins", sans-serif;
+    color: #3252df;
 }
 
 section.navigation a.navbar-brand {
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     color: #3252df;
     font-size: 26px;
     font-weight: 500;
@@ -426,20 +508,20 @@ section.navigation a.navbar-brand {
 
 section.navigation a.navbar-brand span.kurniadi {
     font-size: 26px;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     color: white !important;
     font-weight: 500;
 }
 
 section.navigation.active a.navbar-brand {
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     color: #3252df;
     font-size: 26px;
 }
 
 section.navigation.active a.navbar-brand span.kurniadi {
     font-size: 26px;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     color: white !important;
 }
 
@@ -457,8 +539,8 @@ section.navigation.active {
 section.portfolio button.button-more {
     background-color: #ff498b;
     border-radius: 30px;
-    box-shadow: '1px 2px 2px grey';
-    font-size: 'Poppins', sans-serif;
+    box-shadow: "1px 2px 2px grey";
+    font-size: "Poppins", sans-serif;
     color: white;
     text-align: center;
     width: 100px;
@@ -471,8 +553,10 @@ footer.footers {
     position: static;
     bottom: 0;
     min-height: 150px;
-    margin-top: 50px;
-    font-family: 'Poppins', sans-serif;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    /* padding: 0 0 0 2; */
+    font-family: "Poppins", sans-serif;
     color: white;
     font-size: 12pt;
 }
@@ -489,7 +573,7 @@ footer li a:hover {
 
 footer a.footer-brand {
     margin-top: 0px;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     font-size: 26px;
     font-weight: 500;
     color: #3252df;
@@ -498,7 +582,7 @@ footer a.footer-brand {
 
 footer h4 {
     margin-top: 0px;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     font-size: 12pt;
     font-weight: 500;
     color: white;
@@ -525,11 +609,11 @@ footer div.set2 {
     width: 20%;
     height: 2px;
     margin-bottom: 10px;
-    margin-top: 5px
+    margin-top: 5px;
 }
 
 footer a.footer-brand span {
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     font-size: 26px;
     font-weight: 500;
     color: white;
@@ -537,7 +621,7 @@ footer a.footer-brand span {
 
 nav div#navbarSupportedContent a {
     color: #3252df;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     font-weight: 500;
     font-size: 15px;
     text-decoration: none;
@@ -545,7 +629,7 @@ nav div#navbarSupportedContent a {
 
 section.navigation.active nav div#navbarSupportedContent a {
     color: #3252df;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     font-weight: 500;
     font-size: 15px;
     text-decoration: none;
@@ -560,23 +644,40 @@ div.scroll-to-top {
 
 div.Typewriter {
     font-size: 25px;
-    color: #3252df;
-    font-family: 'Poppins', sans-serif;
+    color: var(--blue-color);
+    font-family: "Poppins", sans-serif;
     font-weight: bold;
+}
+
+section.hero {
+    background: var(--color-primary);
+}
+
+section#portfolio {
+    background: var(--color-primary);
 }
 
 section.hero h5 {
     color: #f7471e;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 
 section.hero p {
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     font-size: 10pt;
+    color: var(--text-color);
+}
+
+div.tagli {
+    background: var(--color-primary);
+}
+
+section#tentang {
+    background: var(--color-primary);
 }
 
 section.tagline h4 {
-    font-family: 'Poppins';
+    font-family: "Poppins";
     font-size: 20px;
     color: #3252df;
     font-weight: 500;
@@ -584,8 +685,9 @@ section.tagline h4 {
 }
 
 section.tagline p {
-    font-family: 'Poppins';
+    font-family: "Poppins";
     font-size: 18px;
+    color: var(--text-color);
 }
 
 section.tagline div.lines {
@@ -608,7 +710,7 @@ section.line {
 
 #cards_landscape_wrap-2 {
     text-align: center;
-    background: #F7F7F7;
+    background: #f7f7f7;
 }
 
 #cards_landscape_wrap-2 .container {
@@ -627,20 +729,21 @@ section.line {
 }
 
 #cards_landscape_wrap-2 .card-flyer .image-box {
-    background: #ffffff;
+    background: var(--color-primary);
     overflow: hidden;
-    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.50);
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.5);
     border-top-left-radius: 5px;
     border-top-right-radius: 15px;
 }
 
 #cards_landscape_wrap-2 .card-flyer .image-box img {
-    -webkit-transition: all .9s ease;
-    -moz-transition: all .9s ease;
-    -o-transition: all .9s ease;
-    -ms-transition: all .9s ease;
+    -webkit-transition: all 0.9s ease;
+    -moz-transition: all 0.9s ease;
+    -o-transition: all 0.9s ease;
+    -ms-transition: all 0.9s ease;
     width: 100%;
     height: 200px;
+    background: var(--color-primary);
 }
 
 #cards_landscape_wrap-2 .card-flyer:hover .image-box img {
@@ -662,19 +765,19 @@ section.line {
 }
 
 #cards_landscape_wrap-2 .card-flyer {
-    background: #FFFFFF;
+    background: #ffffff;
     margin-top: 40px;
     -webkit-transition: all 0.2s ease-in;
     -moz-transition: all 0.2s ease-in;
     -ms-transition: all 0.2s ease-in;
     -o-transition: all 0.2s ease-in;
     transition: all 0.2s ease-in;
-    box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.40);
+    box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.4);
 }
 
 #cards_landscape_wrap-2 .card-flyer:hover {
     background: #fff;
-    box-shadow: 0px 15px 26px rgba(0, 0, 0, 0.50);
+    box-shadow: 0px 15px 26px rgba(0, 0, 0, 0.5);
     -webkit-transition: all 0.2s ease-in;
     -moz-transition: all 0.2s ease-in;
     -ms-transition: all 0.2s ease-in;
@@ -698,23 +801,23 @@ section.line {
     font-size: 18px;
     font-weight: 500;
     text-transform: uppercase;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     letter-spacing: 1px;
     color: #002855;
 }
 
 div.card-flyer div.tag {
     z-index: 3;
-    font-size: .875rem;
+    font-size: 0.875rem;
     background-color: #ff498b;
     padding: 0.25rem 0.25rem;
     position: absolute;
-    top: 10;
+    top: 9;
     right: 0;
     margin-right: 15px;
     color: #fff;
     min-height: 30px;
-    border-radius: 0 15px;
+    border-radius: 2px 2px;
     font-weight: 400;
-    font-family: 'Poppins';
+    font-family: "Poppins";
 }

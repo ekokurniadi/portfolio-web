@@ -39,11 +39,12 @@ export const Wrapper = () => {
 
                 </div>
             </section>
-            <section id="kontak">
+            <section id="kontak" >
                 <Line />
                 <Tagl text="Kontak" />
                 <Contact />
             </section>
+          
             <Footer />
             <MobileNavigation />
         </>

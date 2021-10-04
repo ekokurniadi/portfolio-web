@@ -14,15 +14,15 @@ import ci from '../assets/ci.png';
 
 const Kemampuan = () => {
     const settings = {
-        dots: true,
+        dots: false,
         infinite: true,
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1
     };
     return (
-        <section className="kemampuan mt-4 mb-4 container" >
-                <Slider {...settings}>
+        <section className="kemampuan mt-4 container" >
+                <Slider  {...settings}>
             <div className="container">
                 <div className="row">
                     <div className="col-md-3 py-2" >

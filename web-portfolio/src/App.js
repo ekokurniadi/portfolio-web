@@ -1,10 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
+import { useEffect } from 'react'
+import { keepTheme } from './pages/theme';
 
 function App() {
-    return (
-        <div></div>
-    );
-}
+    useEffect(() => {
+        keepTheme();
+    });
+    return ( <div> </div>);
+    }
 
-export default App;
+    export default App;

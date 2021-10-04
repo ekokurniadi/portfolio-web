@@ -5,7 +5,7 @@ export const Card = (props) => {
     return (
         <section className="card-component" >
             <div id="cards_landscape_wrap-2">
-                <a href="">
+                <a href="/">
                     <div className="card-flyer">
                         <div className="text-box">
                             <div className="image-box">
