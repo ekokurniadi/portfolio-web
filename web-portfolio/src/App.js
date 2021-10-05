@@ -5,6 +5,7 @@ import { keepTheme } from './pages/theme';
 function App() {
     useEffect(() => {
         keepTheme();
+        
     });
     return ( <div> </div>);
     }

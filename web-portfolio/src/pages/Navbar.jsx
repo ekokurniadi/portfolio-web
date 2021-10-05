@@ -1,12 +1,12 @@
 import React, { Fragment } from "react";
 import "./styles.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import ScrollspyNav from "react-scrollspy-nav";
 import avatar from "../assets/avatars.png";
 import { setTheme } from "./theme";
 export const Navbar = () => {
   const [navBackground, setNavBackground] = useState(false);
-  const [mode, setMode] = useState("dark");
+  const [mode, setMode] = useState("light");
   let theme = localStorage.getItem("theme");
   const changeBackground = () => {
     if (window.scrollY >= 80) {
@@ -16,16 +16,32 @@ export const Navbar = () => {
     }
   };
 
+  useEffect(()=>{
+    setTheme("theme-light");
+    setMode("theme-light");
+  },[])
+
   window.addEventListener("scroll", changeBackground);
   const setThema = () => {
     if (localStorage.getItem("theme") === "theme-dark") {
       setTheme("theme-light");
-      setMode("theme-light");
+      setMode("light");
     } else {
       setTheme("theme-dark");
-      setMode("theme-dark");
+      setMode("dark");
     }
   };
+
+  useEffect(() => {
+    if (localStorage.getItem("theme") === "theme-dark") {
+      setMode("dark");
+    } else if (localStorage.getItem("theme") === "theme-light") {
+      setMode("light");
+    }else{
+      setMode("dark");
+    }
+   
+  }, [theme]);
 
   return (
     <Fragment>
@@ -54,7 +70,7 @@ export const Navbar = () => {
               <span
                 className="fa fa-bars"
                 style={
-                  navBackground == true
+                  navBackground === true
                     ? { color: "white" }
                     : { color: "#2880ce" }
                 }
@@ -103,19 +119,32 @@ export const Navbar = () => {
                 </ul>
               </ScrollspyNav>
             </div>
+
             <div className="mt-2 mr-2">
-              <input
-                type="checkbox"
-                class="checkbox"
-                id="checkbox"
-                onClick={setThema}
-              />
+              {mode === "light" ? (
+                <input
+                  type="checkbox"
+                  class="checkbox"
+                  id="checkbox"
+                  checked
+                  onClick={setThema}
+                />
+              ) : (
+                <input
+                  type="checkbox"
+                  class="checkbox"
+                  id="checkbox"
+                  onClick={setThema}
+                />
+              )}
+
               <label for="checkbox" class="label">
                 <i class="fas fa-moon"></i>
                 <i class="fas fa-sun"></i>
                 <div class="ball bounce-7"></div>
               </label>
             </div>
+            
             {/* <label id="switch" class="switch">
               <input type="checkbox" onClick={setThema} id="slider" />
               <span class="slider round"></span>

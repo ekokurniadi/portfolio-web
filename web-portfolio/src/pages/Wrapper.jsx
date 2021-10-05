@@ -15,6 +15,7 @@ export const Wrapper = () => {
     useEffect(() => {
         AOS.init();
         AOS.refresh();
+       
     }, [])
     return (
         <>

@@ -3,7 +3,7 @@ import './styles.css'
 import contact from '../assets/contact-us.jpg';
 export const Contact = () => {
     return (
-        <section className="contact mt-4">
+        <section className="contact mt-4 py-4">
             <div className="container">
                 <div className="row ">
                     <div className="col-md-5 d-flex align-items-center">
