@@ -124,24 +124,25 @@ export const Navbar = () => {
               {mode === "light" ? (
                 <input
                   type="checkbox"
-                  class="checkbox"
+                  className="checkbox"
                   id="checkbox"
                   checked
-                  onClick={setThema}
+                  
+                  onChange={setThema}
                 />
               ) : (
                 <input
                   type="checkbox"
-                  class="checkbox"
+                  className="checkbox"
                   id="checkbox"
-                  onClick={setThema}
+                  onChange={setThema}
                 />
               )}
 
-              <label for="checkbox" class="label">
-                <i class="fas fa-moon"></i>
-                <i class="fas fa-sun"></i>
-                <div class="ball bounce-7"></div>
+              <label htmlFor="checkbox" className="label">
+                <i className="fas fa-moon"></i>
+                <i className="fas fa-sun"></i>
+                <div className="ball bounce-7"></div>
               </label>
             </div>
             

@@ -73,9 +73,7 @@ const Kemampuan = () => {
                             </div>
                         </div>
                     </div>
-                </div>
-               
-                   
+                </div>   
             </div>
             <div className="container">
                 <div className="row">
