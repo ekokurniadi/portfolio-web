@@ -41,7 +41,7 @@ export const Footer = () => {
       try {
         const { data: response } = await axios.get(URI + "/abouts");
         setAbout(response);
-        console.log(response);
+
       } catch (error) {
         console.log(error);
       }
