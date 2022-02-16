@@ -151,6 +151,10 @@ section#kontak {
     background: var(--color-primary);
 }
 
+section#riwayat-pekerjaan {
+    background: var(--color-primary);
+}
+
 div.chatImgWrapper {
     position: relative;
     height: 30px;
@@ -206,6 +210,44 @@ section.mobile-navigation {
     min-height: 50px;
     width: 100%;
     box-shadow: 1px 1px 10px 5px gray;
+}
+
+div.pekerjaan-image {
+    display: inline-flex;
+    align-items: flex-start;
+}
+
+div.container.riwayat-pekerjaan div.card {
+    border-left: #f52060 solid 5px;
+    border-radius: 8px;
+    margin-bottom: 5px;
+}
+
+div.pekerjaan-image h5 {
+    margin-left: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+}
+
+div.pekerjaan-image h6 {
+    margin-left: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: normal;
+}
+
+div.pekerjaan-image p {
+    margin-left: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    font-weight: normal;
+}
+
+div.pekerjaan-image h6.date {
+    margin-left: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    color: #6d6b6b;
 }
 
 section.mobile-navigation div.active {

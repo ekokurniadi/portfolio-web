@@ -1,6 +1,6 @@
 import React from "react";
 import './styles.css'
-import contact from '../assets/contact-us.jpg';
+import contact from '../assets/team.gif';
 export const Contact = () => {
     return (
         <section className="contact mt-4 py-4">
