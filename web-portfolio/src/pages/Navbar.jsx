@@ -107,6 +107,11 @@ export const Navbar = () => {
                     </a>
                   </li>
                   <li className="nav-item li">
+                    <a href="#pengalaman" className="nav-link">
+                      Pengalaman Kerja
+                    </a>
+                  </li>
+                  <li className="nav-item li">
                     <a href="#kemampuan" className="nav-link">
                       Kemampuan
                     </a>

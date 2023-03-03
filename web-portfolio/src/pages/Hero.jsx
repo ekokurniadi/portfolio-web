@@ -48,8 +48,6 @@ export const Hero = () => {
           </div>
           <div className="col-md-6 col-sm-12 col-xs-12 mt-5">
             <img src={ilustration} alt="" className="img-fluid "/>
-
-            
           </div>
         </div>
       </div>

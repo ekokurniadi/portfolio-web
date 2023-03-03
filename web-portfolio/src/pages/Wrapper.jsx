@@ -28,8 +28,12 @@ export const Wrapper = () => {
         <Line />
         <Portfolio />
       </section>
-      <section id="riwayat-pekerjaan">
-        <RiwayatPekerjaan />
+      <section id="pengalaman">
+        <Line />
+        <div className="container">
+          <Tagl text="Pengalaman Kerja" />
+          <RiwayatPekerjaan />
+        </div>
       </section>
       <section id="kemampuan">
         <Line />

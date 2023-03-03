@@ -9,9 +9,9 @@ import { Tagl } from "./Tag";
 export const RiwayatPekerjaan = (props) => {
   return (
     <div className="container riwayat-pekerjaan py-3">
-      <Tagl text="Pengalaman Kerja" />
+     
       <div className="row mt-5">
-        <div className="col-md-12">
+        <div className="col-md-12" data-aos="fade-down" data-aos-duration="1000">
           <div className="card">
             <div className="card-body">
               <div className="pekerjaan-image">
@@ -39,7 +39,7 @@ export const RiwayatPekerjaan = (props) => {
             </div>
           </div>
         </div>
-        <div className="col-md-12">
+        <div className="col-md-12" data-aos="fade-down" data-aos-duration="1000">
           <div className="card">
             <div className="card-body">
               <div className="pekerjaan-image">
@@ -68,7 +68,7 @@ export const RiwayatPekerjaan = (props) => {
           </div>
         </div>
 
-        <div className="col-md-12">
+        <div className="col-md-12" data-aos="fade-down" data-aos-duration="1000">
           <div className="card">
             <div className="card-body">
               <div className="pekerjaan-image">
@@ -89,7 +89,7 @@ export const RiwayatPekerjaan = (props) => {
           </div>
         </div>
 
-        <div className="col-md-12">
+        <div className="col-md-12" data-aos="fade-down" data-aos-duration="1000">
           <div className="card">
             <div className="card-body">
               <div className="pekerjaan-image">
@@ -110,7 +110,7 @@ export const RiwayatPekerjaan = (props) => {
           </div>
         </div>
 
-        <div className="col-md-12">
+        <div className="col-md-12" data-aos="fade-down" data-aos-duration="1000">
           <div className="card">
             <div className="card-body">
               <div className="pekerjaan-image">

@@ -4,8 +4,6 @@ import { useEffect, useState } from "react";
 import up from "../assets/up.png";
 import avatar from "../assets/avatars.png";
 import ScrollspyNav from "react-scrollspy-nav";
-import axios from "axios";
-import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 export const Footer = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -33,28 +31,12 @@ export const Footer = () => {
     );
   };
 
-  const [about, setAbout] = useState({});
-  const [loading, setLoading] = useState(true);
-  const URI = "https://golang-postgres.herokuapp.com/api/v1";
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const { data: response } = await axios.get(URI + "/abouts");
-        setAbout(response);
-
-      } catch (error) {
-        console.log(error);
-      }
-      setLoading(false);
-    };
-    fetchData();
-  }, []);
   return (
     <section>
       <footer className="footers">
         <div className="container">
           <div className="row">
-            <div className="col-md-4 justify-content-center py-2 first">
+            <div className="col-md-6 justify-content-center py-2 first">
               <a
                 href="/"
                 className="footer-brand align-items-center"
@@ -98,78 +80,7 @@ export const Footer = () => {
                 </ul>
               </ScrollspyNav>
             </div>
-            <div className="col-md-4 justify-content-center py-2 first">
-              <h4>Tentang</h4>
-              <div className="set2"></div>
-              {loading && (
-                <div>
-                  <Skeleton
-                    width={80}
-                    baseColor="grey"
-                    highlightColor="#f5f5f5"
-                    duration={1.5}
-                    direction="ltr"
-                    enableAnimation={true}
-                  />
-                  <Skeleton
-                    width="100%"
-                    height={150}
-                    baseColor="grey"
-                    highlightColor="#f5f5f5"
-                    duration={1.5}
-                    direction="ltr"
-                    enableAnimation={true}
-                  />
-                  <Skeleton
-                    width="86%"
-                    height={80}
-                    baseColor="grey"
-                    highlightColor="#f5f5f5"
-                    duration={1.5}
-                    direction="ltr"
-                    enableAnimation={true}
-                  />
-                </div>
-              )}
-              {!loading && (
-                <div>
-                  {about.data.map((item) => (
-                    <div key={item.id}>
-                      <div >
-                        <p>
-                          <span>
-                            {item.tentang_saya}
-                          </span>
-                        </p>
-                      </div>
-                      <div>
-                        <i className="fa fa-map"></i>
-                        &nbsp;Alamat
-                        <p>
-                        {item.alamat}
-                        </p>
-                      </div>
-                      <div>
-                        <i className="fa fa-phone"></i>
-                        &nbsp;Telp
-                        <p> {item.telp} </p>
-                      </div>
-                      <div>
-                        <i className="fab fa-whatsapp"></i>
-                        &nbsp;WhatsApp
-                        <p>{item.whatsapp} </p>
-                      </div>
-                      <div>
-                        <i className="fa fa-envelope"></i>
-                        &nbsp;Email
-                        <p>{item.email} </p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              )}
-            </div>
-            <div className="col-md-4 justify-content-center py-2 mt-4">
+            <div className="col-md-6 justify-content-center py-2 mt-4">
               <h4>Media Social</h4>
               <div className="set2"></div>
               <p>

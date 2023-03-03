@@ -17,13 +17,20 @@ export const Tagline = (props) => {
           </div>
           <div className="col-md-12 col-sm-12 col-xs-12 d-flex justify-content-center align-items-center mt-4">
             <p style={{ textAlign: "center" }}>
-              Hello, Nama saya Eko Kurniadi, dan saya tinggal di Jambi. <br />{" "}
-              Saya bekerja remote pada beberapa Project untuk banyak client di
-              Indonesia
+              Hi, Nama saya Eko Kurniadi. <br/>Saya seorang Flutter Developer &
+              FullStack Developer yang memiliki pengalaman lebih dari 3 tahun.
+              Saat ini saya bekerja sebagai Senior Mobile Engineer di Majoo.
+              Saya menyukai tantangan dan senang belajar hal baru. <br />{" "}
             </p>
           </div>
           <div className="col-md-12 col-sm-12 col-xs-12 d-flex justify-content-center align-items-center">
-            <svg viewBox="0 0 160 160" width="160" height="160" id="circles" fill="orange">
+            <svg
+              viewBox="0 0 160 160"
+              width="160"
+              height="160"
+              id="circles"
+              fill="orange"
+            >
               <circle cx="80" cy="80" r="50" />
               <g transform=" matrix(0.866, -0.5, 0.25, 0.433, 80, 80)">
                 <path
